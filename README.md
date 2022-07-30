@@ -36,4 +36,4 @@ I was thinking of a way to store data in pixels. Then I suddenly thought about t
 * Data is written or read using the character list array ( e.g [ 22, 56, 54...] ) and then converted to it's base64 value by the array present which acts as a map.
 
 ## The use?
-Well, this specific project serves no purpose other than an experiment nor meant to be considered serious. I was learning how pixels works and thought of this idea to experiment with the dimensional iteration with an interesting concept to implement.
+Well, this specific project serves no purpose other than being an experiment nor meant to be considered serious. I was learning how pixels works and thought of this idea to experiment with the dimensional iteration with an interesting concept to implement.
