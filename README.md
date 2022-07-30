@@ -7,20 +7,20 @@ Pixel height based data encoding, not the preferred/efficient way of encoding da
 `PIL` - for reading pixels and info ( `pip install PIL` )
 
 ## Writer
-![](writer.png)
-(The encoded version of the inital writer.py)
 **Usage**
 ```bash
 python3 writer.py <out image> <string / text file>
 ```
+![](writer.png)
+*( The high-pix encoded version of the inital `writer.py` )*
 
 ## Reader
-![](reader.png)
-(The encoded version of the inital writer.py)
 **Usage**
 ```bash
 python3 reader.py <in image> -q # -q for text only output
 ```
+![](reader.png)
+*( The high-pix encoded version of the inital `reader.py` )*
 
 ## Logic behind this
 ### Working logic
