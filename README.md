@@ -28,11 +28,11 @@ I was thinking of a way to store data in pixels. Then I suddenly thought about t
 **NOTE : This uses base64(utf-8) to represent values from 0-63**
 
 ### How the script works
-* At start, it starts from the initial `y` pixel row and goes to the pixel before the final pixel ( y = height - 1).
-* Checks if the pixel is black ( which means it represents 1 ), moves one pixel up in the `y` pixel row by ( y = y - 1) and increment the counter by 1 ( n = n + 1 )
+* At start, it jumps to the `y` pixel before the final pixel ( y = height - 1) and the pixel after the initial pixel ( x = 1 ).
+* Checks if the pixel is black ( which means it represents 1 ), moves one pixel up in the `y` pixel row by one ( y = y - 1) and increments the counter by 1 ( n = n + 1 )
 * This loop (while) continues while the pixel is black in color
-* If the above pixel is not black, it stops the loop, appends the counter value ( e.g 5 ) to the character list array and moves to the next pixel in `x` colum and starts the same process as mentioned above.
-* This continues this process till it reaches the end of the image width ( x_max = width - 1 )
+* If the current pixel is not black; it stops the loop, appends the counter value ( e.g 5 ) to the character list array and moves to the next pixel in `x` column and starts the same process as mentioned above.
+* This process continues till it reaches the end of the image width ( x_max = width - 1 )
 * Data is written or read using the character list array ( e.g [ 22, 56, 54...] ) and then converted to it's base64 value by the array present which acts as a map.
 
 ## The use?
