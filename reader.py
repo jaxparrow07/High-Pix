@@ -28,12 +28,12 @@ start_y = y_max - 1
 for x_pixel in range(0,x_max):
     current_color = im.getpixel( (x_pixel, start_y) )
 
-    if current_color != transparent:
+    if current_color == black:
 
         char_num = 1
         pixel_up_y = start_y - 1
 
-        while (im.getpixel( (x_pixel, pixel_up_y ) ) != transparent ):
+        while (im.getpixel( (x_pixel, pixel_up_y ) ) == black ):
             pixel_up_y -= 1
             char_num += 1
 

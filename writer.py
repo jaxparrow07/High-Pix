@@ -21,7 +21,7 @@ else:
     read_text = sys.argv[2]
 
 im = Image.new('RGBA', (len(encode(read_text)) + 2, 66))
-x_max = im.width # need to subtract one pixel from this since color space counts from 1 instead of 0
+x_max = im.width - 1 # need to subtract one pixel from this since color space counts from 1 instead of 0
 y_max = im.height - 1 #
 start_y = y_max - 1
 
@@ -29,7 +29,7 @@ chars = []
 for item in split(encode(read_text)):
     chars.append(int(item.replace(item, str(base64_chars.index(item) + 1 ))))
 
-for x_pixel in range(1, x_max - 1):
+for x_pixel in range(1, x_max):
     y_pix = start_y
     for pixls in range(0, chars[x_pixel - 1]):
         im.putpixel((x_pixel, y_pix), (0,0,0, 255))
